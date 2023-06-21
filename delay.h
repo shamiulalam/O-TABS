@@ -1,4 +1,4 @@
 void delay(int seconds)
 {
-    _sleep(seconds * 1000);
+    Sleep(seconds * 1000);
 }
