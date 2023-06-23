@@ -7,6 +7,7 @@
 #include"delay.h"
 #include"invisible.h"
 #include"login.h"
+#include"menu.h"
 
 int main(void)
 {
@@ -20,5 +21,9 @@ int main(void)
     system("cls");
     menuLogin();
     delay(2);
+    system("cls");
+    delay(2);
+    menu();
+    system("cls");
     return 0;
 }
