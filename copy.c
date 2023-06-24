@@ -85,15 +85,16 @@ void sign_up() {
     printf("\n\n\t\t\t\t\t\t\t\tConfirm Password : \t");
     takepassword(password2);
 
-    if (strcmp(user.password, password2) == 0) {
-        system("cls");
-        FILE *fp = fopen("txt1.txt", "a+");
-        if (fp != NULL) {
-            fprintf(fp, "%s %s %s %s %s\n", user.fname, user.lname, user.email, user.username, user.password);
-            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tYou have successfully signed up in O'Tabs! Your username is %s.\n", user.username);
-            fclose(fp);
-            char key;
-            while(1){
+    if ((strstr(user.email, "@")!= NULL)) {
+            if(strcmp(user.password, password2) == 0){
+                system("cls");
+                FILE *fp = fopen("txt1.txt", "a+");
+                if (fp != NULL) {
+                fprintf(fp, "%s %s %s %s %s\n", user.fname, user.lname, user.email, user.username, user.password);
+                printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tYou have successfully signed up in O'Tabs! Your username is %s.\n", user.username);
+                fclose(fp);
+                char key;
+                while(1){
                 printf("\n\n\t\t\t\t  Press 's' to sign in to your account. Press 'm' to go back to menu option. Press any other key to exit from O'Tabs.\n");
                 key = getch();
                 invisible(1);
@@ -126,8 +127,14 @@ void sign_up() {
         system("cls");
         sign_up();
     }
+  }
+  else{
+        printf("\n\n\n\t\t\t\t\t\t\t\tIncorrect form of email address. Please Try Again.\n");
+        Beep(1000, 1500);
+        system("cls");
+        sign_up();
+  }
 }
-
 void login() {
     system("cls");
     struct user logInfo[100];
