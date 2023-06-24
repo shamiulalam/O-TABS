@@ -3,7 +3,7 @@ SO what this code actually does is, it creates workspaces, modifies them, add me
 First the project shows a recursive loading screen where it goes to the splash screem if the progress bar reaches 100%.
 Then the splash screen stays for about 3 seconds.
 After that it closes the splash screen and opens menu for login options where we can sign up, login and exit from O'Tabs.
-In the sign up option there are some information one have to fill up. If the email has '@' and confirm password matches the password then it successfully creates an account otherwise it will show invalid. From there we can go to the login screen or choose to exit.
+In the sign up option there are some informations one has to fill up. If the email has '@' and confirm password matches the password then it successfully creates an account otherwise it will show invalid. From there we can go to the login screen or choose to exit.
 In the login option one has to input username and password. If the username and password matches with the username and password stored in txt1.file then it will show login successful.
 Then I included menu option for workspace where we can do multiple things, such as- creating workspace, joining a workspace, manage worspace, manage members and view the current statistics of O'Tabs.
 We can simply create a workspace, then from there we can choose to directly go to join option or exit.
